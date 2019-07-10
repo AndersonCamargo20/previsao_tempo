@@ -42,6 +42,7 @@ Agora é necessário preparar o banco de dados, antes disso entre no diretório 
 Para preparar a api basta rodar o comando:
 `pip install -r requiments.txt` e o python erá baixar as dependecias, incluindo o drive de conexão com o banco postgress (**psycopg2**)
 Além disso os parâmetros de cofiguração de conexão com o banco de dados serão necessário, para isso entre na pasta **apiprevisaotempo/apiprevisaotempo** e localize o arquivo `setting.py` será necessáio editar este aruivo para a conexão com o banco de dados, localize a linha onde a variável `DATABASES` se encontra, altere para:
+<blockquote>    
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -52,6 +53,7 @@ Além disso os parâmetros de cofiguração de conexão com o banco de dados ser
             'PORT': '5432',
         }
     }
+</blockquote>
 Onde **DB_USER, DB_PASS e DB_HOST** são os parâmetros de conexão, usuário senha e host do banco de dados
 Perceba que o django irá busca o banco `previsao_tempo`, logo, esta banco precisa ser criado previamente no postgress.
 
